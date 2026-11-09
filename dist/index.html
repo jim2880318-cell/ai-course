@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f3ef" />
+    <meta name="description" content="按阶段完成课程需求分析、教学设计、材料生成与质量验收。" />
+    <title>AI 课程开发工作台</title>
+    <link rel="stylesheet" href="/styles.css?v=15" />
+    <script type="module" src="/course-studio-v15.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="/" aria-label="AI 课程开发工作台首页">
+          <span class="brand-mark"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-copy"><strong>课程工坊</strong><small>AI COURSE STUDIO</small></span>
+        </a>
+        <div class="side-section-label">工作空间</div>
+        <button class="side-link active" data-action="home"><span class="side-icon">⌂</span>工作台</button>
+        <div class="side-list-head"><span>我的课程项目</span><button class="icon-button small" data-action="new-project" aria-label="新建课程项目">＋</button></div>
+        <div class="project-nav" id="projectNav"></div>
+        <div class="sidebar-spacer"></div>
+        <div class="side-help">
+          <span class="help-orbit">✳</span>
+          <strong>五阶段课程工作流</strong>
+          <p>每一步都有清晰产出，关键节点由你确认。</p>
+          <button data-action="show-guide">查看流程 <span>↗</span></button>
+        </div>
+        <div class="sidebar-footer"><span class="status-dot"></span>内容保存在当前浏览器</div>
+      </aside>
+
+      <section class="main-column">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button menu-button" data-action="toggle-menu" aria-label="打开导航">☰</button>
+            <div class="breadcrumbs" id="breadcrumbs"><span>工作台</span></div>
+          </div>
+          <div class="topbar-actions">
+            <button class="button button-quiet" data-action="export-project" id="exportButton" hidden>备份 JSON <span>↓</span></button>
+            <span class="avatar">AI</span>
+          </div>
+        </header>
+        <main id="appMain" tabindex="-1"></main>
+      </section>
+    </div>
+
+    <div class="modal-host" id="modalHost"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
