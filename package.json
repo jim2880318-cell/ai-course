@@ -1,0 +1,12 @@
+{
+  "name": "ai-course-workbench",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-worker.mjs",
+    "start": "node server-node.mjs"
+  }
+}
